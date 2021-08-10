@@ -12,7 +12,7 @@ console.log(sum(5, 5, 5, 2, 3));
 
 // rest operator ...
 function soma(...args) {
-  return args((acc, value2) => acc + value2, 0);
+  return args.reduce((acc, value2) => acc + value2, 0);
 }
 
 console.log(soma(5, 5, 5, 2, 3));
@@ -23,3 +23,12 @@ const soma4 = (a, b, ...rest) => {
 };
 
 console.log(soma4(5, 5, 5, 2, 3));
+
+const multiply = (...args) => args.reduce((accs, values) => accs * values, 1);
+
+// soluçao antes do ECMA6
+const sum2 = (...rest2) => {
+  return multiply.apply(undefined, rest2);
+};
+
+console.log(sum2(5, 5, 5, 2, 3));
