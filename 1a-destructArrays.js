@@ -14,3 +14,4 @@ var [apple2, banana2, orange2, [tomato2]] = [
 ];
 
 console.log(apple, apple2);
+
