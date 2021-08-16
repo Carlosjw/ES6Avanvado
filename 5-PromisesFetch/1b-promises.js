@@ -14,7 +14,13 @@ const doOtherthingPromise = new Promise((resolve, reject) => {
   }, 1000);
 });
 
-doSomethingPromise.then((data) => console.log(data)).catch();
+doSomethingPromise
+  .then((data) => {
+    console.log(data);
+    return doOtherthingPromise;
+  })
+  .then((data2) => console.log(data2))
+  .catch();
 
 // Callbacks
 function doSomething(callback) {
