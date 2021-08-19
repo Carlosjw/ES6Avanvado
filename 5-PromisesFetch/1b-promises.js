@@ -8,6 +8,7 @@ const doSomethingPromise = new Promise((resolve, reject) => {
 });
 
 const doOtherthingPromise = new Promise((resolve, reject) => {
+  throw new Error("Something wrong");
   setTimeout(function () {
     // did doSomething
     resolve("Second data");
@@ -17,10 +18,10 @@ const doOtherthingPromise = new Promise((resolve, reject) => {
 doSomethingPromise
   .then((data) => {
     console.log(data);
-    return doOtherthingPromise;
+    return doOtherthingPromise();
   })
   .then((data2) => console.log(data2))
-  .catch();
+  .catch((error) => console.log("Ops", error));
 
 // Callbacks
 function doSomething(callback) {
