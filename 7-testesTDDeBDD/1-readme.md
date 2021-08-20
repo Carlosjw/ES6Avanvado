@@ -38,3 +38,18 @@
 * Maior segurança em alterações e novas funcionalidades;
 * Código mais limpo;
 * Produtividade.
+  
+## BDD (Behavior Driven Development)
+
+Desenvolvimento orientado a comportamento. Técnica de desenvolvimento ágil que visa integra regras de negócio com linguagem de programação.
+
+### pilares
+* Testes;
+* Documentação;
+* Exemplos;
+
+### Vantagens
+
+* Compartilhamento do conhecimento;
+* Documentação dinâmica;
+* Visão do todo.
