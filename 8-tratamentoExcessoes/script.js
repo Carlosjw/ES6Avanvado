@@ -14,7 +14,7 @@ class app {
     });
   }
 
-  handlClick(val) {
+  handleClick(val) {
     const counterEl = document.querySelector(".counter");
     const value = parseInt(counterEl.innerText);
 
